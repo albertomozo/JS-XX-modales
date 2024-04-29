@@ -72,13 +72,15 @@
         document.getElementById('articulos').innerHTML = textoArticulos;
 
         function verModal(id){
-            // juscazr en json flores
-            console.log(document.querySelector('#modalH2'));
-            console.log(nombre);
-            console.log(imagen);
-            document.querySelector('#modalDescripcion').innerHTML = descripcion;
+            // Buscar en json flores
+            const flor = flores.find(item => item.nombre == id );
+            console.log(flor);
+
+         
+            
+            document.querySelector('#modalDescripcion').innerHTML = flor.descripcion;
             document.querySelector('#modalH2').innerHTML = flor.nombre;
-            document.querySelector('#articuloImagen').src=`modal/${imagen}`
+            document.querySelector('#articuloImagen').src=`modal/${flor.imagen}` 
             modalArticulo.showModal();
         }
 

@@ -6,4 +6,7 @@ dialog básico
 
 
 ### 04-dialog_05.html
-botonoes personalizados
+botonos personalizados
+
+### 04-dialog_07.html
+array method find
