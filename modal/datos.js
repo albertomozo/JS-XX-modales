@@ -18,5 +18,11 @@ const flores = [
         "imagen" : "img/imagen2.jpg",
         "precio" : 6,
     },
+    {
+        "nombre" : "Rosa",
+        "descripcion" : "Rosa rosae ",
+        "imagen" : "img/imagen1.jpg",
+        "precio" : 7,
+    }
 
 ]

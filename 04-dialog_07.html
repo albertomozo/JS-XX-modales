@@ -40,7 +40,7 @@
 
     <dialog id="modalArticulo">
        <h2 id="modalH2">Flor</h2>
-       <p>descripcion
+       <p id="modalDescripcion">descripcion
        </p>
        <div id="imagenMarco">
             <img id="articuloImagen" src="modal/img/imagen1.jpg" >
@@ -54,26 +54,30 @@
       
 
         // recorro el objeto flores
-        let textoArticulos = '';
-
+        let textoArticulos= '';
+        //let textoArticulos = '<table>';
+        //let numColumnas  = 2;
         for (flor of flores)
         {
+            
             console.log(flor);
             textoArticulos += `<article id="${flor.nombre}" class="ficha">
             <p>${flor.nombre}</p>
-            
+            <p>${flor.descripcion}</p>
            
-            <button onclick="verModal('${flor.nombre}','${flor.imagen}')">Abrir ventana modal</button>
+            <button onclick="verModal('${flor.nombre}')">Abrir ventana modal</button>
             </article>`;
-        } 
-               
+        }     
+        //  textoArticulos +='</table>';
         document.getElementById('articulos').innerHTML = textoArticulos;
 
-        function verModal(nombre,imagen){
+        function verModal(id){
+            // juscazr en json flores
             console.log(document.querySelector('#modalH2'));
             console.log(nombre);
             console.log(imagen);
-            document.querySelector('#modalH2').innerHTML = nombre;
+            document.querySelector('#modalDescripcion').innerHTML = descripcion;
+            document.querySelector('#modalH2').innerHTML = flor.nombre;
             document.querySelector('#articuloImagen').src=`modal/${imagen}`
             modalArticulo.showModal();
         }
